@@ -30,8 +30,9 @@ gem 'devise'
 gem 'gibbon'
 gem 'high_voltage'
 gem 'jquery-rails'
-gem 'payola-payments'
+gem 'payola-payments', git: 'https://github.com/alekseenko/payola'
 gem 'sucker_punch'
+gem 'pg'
 gem 'therubyracer', :platform=>:ruby
 group :development do
   gem 'better_errors'
@@ -42,6 +43,5 @@ group :development, :test do
   gem 'sqlite3'
 end
 group :production do
-  gem 'pg'
   gem 'unicorn'
 end
