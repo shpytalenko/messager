@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   after_initialize :set_default_role, :if => :new_record?
   after_initialize :set_default_plan, :if => :new_record?
   # after_create :sign_up_for_mailing_list
-
+  has_many :alerts
   belongs_to :plan
   validates_associated :plan
 

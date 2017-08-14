@@ -1,0 +1,46 @@
+<%= simple_form_for @alert, :html => { :class => 'form-horizontal col-md-offset-2 col-md-6' } do |f| %>
+  <%= f.hidden_field :user_id %>
+  <%= f.error_span(:user_id) %>
+  <%= f.input :coin_to_watch %>
+  <%= f.error_span(:coin_to_watch) %>
+  <%= f.input :alert_type, as: :radio_buttons, collection: ["SMS", "Email"], :label=>"Alert when price is above:" %>
+  <%= f.error_span(:alert_type) %>
+  <%= f.input :email , as: :email %>
+  <%= f.error_span(:email) %>
+  <%= f.input :phone_number, as: :tel %>
+  <%= f.error_span(:phone_number) %>
+  
+  <fieldset >
+    <legend class="text-muted text-info "> Alert condition rules: </legend>
+  <div class="row ">
+    <div class="col-md-6">
+      <%= f.input :price_above, :class=> "form-control", :hint => "Alert when price is above:" %>
+    <%= f.error_span(:price_above) %>
+    </div>
+    <div class="col-md-offset-1 col-md-3">
+      <%= f.input :above_currency, :collection => ["BTC","USD"], :label => "Currency", include_blank: false %>
+      <%= f.error_span(:above_currency) %>
+    </div>
+  </div>
+  
+  <div class="row ">
+    <div class="col-md-6">
+      <%= f.input :price_below, :class=> "form-control", :hint => "Alert when price is above:" %>
+      <%= f.error_span(:price_below) %>
+    </div>
+    <div class="col-md-offset-1 col-md-3">
+      <%= f.input :below_curency, :collection => ["BTC","USD"], :label => "Currency", include_blank: false %>
+      <%= f.error_span(:below_curency) %>
+    </div>
+  </div>
+  
+  </fieldset>
+  <%#= f.input :data %>
+  <%#= error_span(@alert[:data]) %>
+  <%= f.input :active,  as: :radio_buttons, collection: ["Active", "Disable"], :label=>"Active or deactivate alert:" %>
+  <%= f.error_span(:active) %>
+  <%= f.button :submit, :class => 'btn-primary btn-block' %>
+  <br/>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                alerts_path, :class => 'btn btn-default' %>
+<% end %>

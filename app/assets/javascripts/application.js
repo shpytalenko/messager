@@ -14,4 +14,15 @@
 //= require payola
 //= require rails-ujs
 //= require bootstrap-sprockets
+//= require nprogress
+//= require nprogress-ajax
+//= require nprogress-turbolinks
 //= require_tree .
+//
+//
+//
+NProgress.configure({
+  showSpinner: false,
+  ease: 'ease',
+  speed: 500
+});

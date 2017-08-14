@@ -1,4 +1,25 @@
 GIT
+  remote: git://github.com/seyhunak/twitter-bootstrap-rails.git
+  revision: c236286b7d6e73affa1597f62fd51e9dbd268f1c
+  specs:
+    twitter-bootstrap-rails (4.0.0)
+      actionpack (~> 5.0, >= 5.0.1)
+      execjs (~> 2.7)
+      less-rails (~> 2.8, >= 2.8.0)
+      railties (~> 5.0, >= 5.0.1)
+
+GIT
+  remote: https://github.com/activerecord-hackery/ransack.git
+  revision: c869fc2105002b1512a856acd3337a5ee0a04a29
+  specs:
+    ransack (1.8.3)
+      actionpack (>= 3.0)
+      activerecord (>= 3.0)
+      activesupport (>= 3.0)
+      i18n
+      polyamorous (~> 1.3)
+
+GIT
   remote: https://github.com/alekseenko/payola
   revision: af67b1a4601932f23d0533327557280bc5f5c756
   specs:
@@ -98,6 +119,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
+    commonjs (0.2.7)
     concurrent-ruby (1.0.5)
     datetime_picker_rails (0.0.7)
       momentjs-rails (>= 2.8.1)
@@ -107,17 +129,38 @@ GEM
       railties (>= 4.1.0, < 5.2)
       responders
       warden (~> 1.2.3)
+    domain_name (0.5.20170404)
+      unf (>= 0.0.5, < 1.0.0)
     erubi (1.6.1)
+    excon (0.58.0)
     execjs (2.7.0)
     faraday (0.12.2)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.18)
+    font-awesome-rails (4.7.0.2)
+      railties (>= 3.2, < 5.2)
     gibbon (3.1.0)
       faraday (>= 0.9.1)
       multi_json (>= 1.11.0)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
+    haml (5.0.2)
+      temple (>= 0.8.0)
+      tilt
+    heroku (3.41.5)
+      heroku-api (>= 0.3.19)
+      launchy (>= 0.3.2)
+      multi_json (>= 1.10)
+      net-ssh-gateway (>= 1.2.0)
+      netrc (>= 0.10.0)
+      rest-client (>= 1.6.0)
+      rubyzip (>= 0.9.9)
+    heroku-api (0.4.3)
+      excon (~> 0.45)
+      multi_json (~> 1.8)
     high_voltage (3.0.0)
+    http-cookie (1.0.3)
+      domain_name (~> 0.5)
     hub (1.12.4)
     i18n (0.8.6)
     jbuilder (2.7.0)
@@ -127,6 +170,12 @@ GEM
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
+    jquery-ui-rails (5.0.5)
+      railties (>= 3.2.16)
+    jsonb_accessor (1.0.0.beta.6)
+      activerecord (>= 5.0)
+      activesupport (>= 5.0)
+      pg (>= 0.18.1)
     kaminari (1.0.1)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.0.1)
@@ -140,6 +189,15 @@ GEM
       kaminari-core (= 1.0.1)
     kaminari-core (1.0.1)
     kgio (2.11.0)
+    launchy (2.4.3)
+      addressable (~> 2.3)
+    less (2.6.0)
+      commonjs (~> 0.2.7)
+    less-rails (2.8.0)
+      actionpack (>= 4.0)
+      less (~> 2.6.0)
+      sprockets (> 2, < 4)
+      tilt
     libv8 (3.16.14.19)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -160,14 +218,29 @@ GEM
       railties (>= 3.1)
     multi_json (1.12.1)
     multipart-post (2.0.0)
+    nested_form (0.3.2)
+    net-ssh (4.1.0)
+    net-ssh-gateway (2.0.0)
+      net-ssh (>= 4.0.0)
+    netrc (0.11.0)
     nio4r (2.1.0)
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
+    nprogress-rails (0.2.0.2)
     orm_adapter (0.5.0)
     pg (0.21.0)
+    polyamorous (1.3.1)
+      activerecord (>= 3.0)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
     public_suffix (2.0.5)
     puma (3.9.1)
     rack (2.0.3)
+    rack-pjax (1.0.0)
+      nokogiri (~> 1.5)
+      rack (>= 1.1)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.1.3)
@@ -187,6 +260,19 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails_admin (1.2.0)
+      builder (~> 3.1)
+      coffee-rails (~> 4.0)
+      font-awesome-rails (>= 3.0, < 5)
+      haml (>= 4.0, < 6)
+      jquery-rails (>= 3.0, < 5)
+      jquery-ui-rails (~> 5.0)
+      kaminari (>= 0.14, < 2.0)
+      nested_form (~> 0.3)
+      rack-pjax (>= 0.7)
+      rails (>= 4.0, < 6)
+      remotipart (~> 1.3)
+      sass-rails (>= 4.0, < 6)
     rails_layout (1.0.41)
     railties (5.1.3)
       actionpack (= 5.1.3)
@@ -196,13 +282,21 @@ GEM
       thor (>= 0.18.1, < 2.0)
     raindrops (0.18.0)
     rake (12.0.0)
+    ransack_simple_form (0.1.2)
+      ransack (>= 1.1)
+      simple_form (>= 3.0)
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
     ref (2.0.0)
+    remotipart (1.3.1)
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
+    rest-client (2.0.2)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 4.0)
+      netrc (~> 0.8)
     ruby_dep (1.5.0)
     rubyzip (1.2.1)
     sass (3.5.1)
@@ -220,6 +314,10 @@ GEM
     selenium-webdriver (3.4.4)
       childprocess (~> 0.5)
       rubyzip (~> 1.0)
+    simple_form (3.5.0)
+      actionpack (> 4, < 5.2)
+      activemodel (> 4, < 5.2)
+    slop (3.6.0)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -240,6 +338,7 @@ GEM
       stripe (>= 1.6, < 4.0)
     sucker_punch (2.0.2)
       concurrent-ruby (~> 1.0.0)
+    temple (0.8.0)
     therubyracer (0.12.3)
       libv8 (~> 3.16.14.15)
       ref
@@ -253,6 +352,9 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.4)
     unicorn (5.3.0)
       kgio (~> 2.6)
       raindrops (~> 0.7)
@@ -282,24 +384,35 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   gibbon
+  heroku
   high_voltage
   hub
   jbuilder (~> 2.5)
   jquery-rails
+  jsonb_accessor (= 1.0.0.beta.6)
+  less-rails
   listen (>= 3.0.5, < 3.2)
+  nested_form
+  nprogress-rails
   payola-payments!
   pg
+  pry
   puma (~> 3.7)
   rails (~> 5.1.3)
+  rails_admin (~> 1.2)
   rails_layout
+  ransack!
+  ransack_simple_form
   sass-rails (~> 5.0)
   selenium-webdriver
+  simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
   sucker_punch
   therubyracer
   turbolinks (~> 5)
+  twitter-bootstrap-rails!
   tzinfo-data
   uglifier (>= 1.3.0)
   unicorn

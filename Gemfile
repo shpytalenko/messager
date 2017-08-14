@@ -11,8 +11,12 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
+gem "jsonb_accessor", "1.0.0.beta.6"
+gem 'nprogress-rails'
+gem 'rails_admin', '~> 1.2'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry'
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
 end
@@ -34,6 +38,13 @@ gem 'payola-payments', git: 'https://github.com/alekseenko/payola'
 gem 'sucker_punch'
 gem 'pg'
 gem 'therubyracer', :platform=>:ruby
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'simple_form'
+gem 'nested_form'
+gem 'ransack', github: 'activerecord-hackery/ransack'
+gem 'ransack_simple_form'
+gem 'heroku'
 group :development do
   gem 'better_errors'
   gem 'hub', :require=>nil

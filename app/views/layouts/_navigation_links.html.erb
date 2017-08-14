@@ -1,2 +1,10 @@
-<%# add navigation links to this file %>
-<li><%= link_to 'About', page_path('about') %></li>
+<li><%= link_to "Alerts", alerts_path  %></li>
+<li><%= link_to "API Configuration", "#" %></li>
+<li><%= link_to "About", "#" %></li>
+<% if !user_signed_in? %>
+  <li><%= link_to "Sign in", main_app.new_user_session_path %></li>
+  <li><%= link_to "Sign up", main_app.new_user_registration_path %></li>
+<% else %>
+
+
+<% end %>

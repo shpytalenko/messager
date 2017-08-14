@@ -1,0 +1,39 @@
+<%- model_class = Alert -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:user_id) %>:</strong></dt>
+  <dd><%= @alert.user_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:coin_to_watch) %>:</strong></dt>
+  <dd><%= @alert.coin_to_watch %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:email) %>:</strong></dt>
+  <dd><%= @alert.email %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:phone_number) %>:</strong></dt>
+  <dd><%= @alert.phone_number %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:price_above) %>:</strong></dt>
+  <dd><%= @alert.price_above %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:above_currency) %>:</strong></dt>
+  <dd><%= @alert.above_currency %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:price_below) %>:</strong></dt>
+  <dd><%= @alert.price_below %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:below_curency) %>:</strong></dt>
+  <dd><%= @alert.below_curency %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:data) %>:</strong></dt>
+  <dd><%= @alert.data %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:active) %>:</strong></dt>
+  <dd><%= @alert.active %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:alert_type) %>:</strong></dt>
+  <dd><%= @alert.alert_type %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              alerts_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_alert_path(@alert), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              alert_path(@alert),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
